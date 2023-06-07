@@ -1,0 +1,16 @@
+.inputForm {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.inputBox {
+    flex: 1;
+    height: 36px;
+    font-size: 1.5rem;
+    padding: 4px 1rem;
+}
+
+.submitBtn {
+    width: 48px;
+}
