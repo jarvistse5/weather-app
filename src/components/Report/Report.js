@@ -10,7 +10,7 @@ const Report = ({weather}) => {
                 <div className="weatherMain">
                     <h3>{weather.name}</h3>
                     <div className="weatherImageContainer">
-                        <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}></img>
+                        <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description}></img>
                         <span className="tempText">{Math.round(weather.main.temp)}°C</span>
                     </div>
                     <div className="weatherDescription">{weather.weather[0].description}</div>
