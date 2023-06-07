@@ -14,3 +14,9 @@
 .submitBtn {
     width: 48px;
 }
+
+.inputError {
+    color: red;
+    font-weight: 700;
+    padding: 1rem;
+}
