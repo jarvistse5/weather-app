@@ -1,0 +1,63 @@
+.reportCard {
+    color: gray;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 24px;
+}
+
+.reportTitle {
+
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .cardBody {
+        flex-direction: row;
+    }
+}
+
+.weatherMain {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.weatherDetails {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.weatherImageContainer {
+    display: flex;
+    align-items: center;
+}
+
+.tempText {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.weatherStat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.weatherStatFlex {
+    display: flex;
+}
+
+.weatherStatKey {
+    min-width: 150px;
+}
+
+.weatherStatValue {
+    color: darkblue;
+}

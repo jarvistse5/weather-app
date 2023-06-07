@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Wrapper from './components/Wrapper/Wrapper';
+import Header from './components/Header/Header';
+import Search from './components/Search/Search';
+import Report from './components/Report/Report';
 
 function App() {
   const [city, setCity] = useState('');
@@ -28,31 +32,17 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Weather App</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={city}
-          onChange={handleCityChange}
-          placeholder="City"
-        />
-        <button type="submit">Submit</button>
-      </form>
+    <Wrapper>
+      <Header></Header>
+      <Search handleSubmit={handleSubmit}
+              handleCityChange={handleCityChange}
+              city={city}
+              >
+      </Search>
       {weather && (
-        <div>
-          <h2>{weather.name}</h2>
-          <p>{weather.weather[0].description}</p>
-          <p>Temperature: {weather.main.temp}°C</p>
-          <p>Humidity: {weather.main.humidity}%</p>
-          <p>Wind: {weather.wind.speed} m/s</p>
-          <p>Pressure: {weather.main.pressure} hPa</p>
-          <p>Clouds: {weather.clouds.all}%</p>
-          <p>Sea Level: {weather.main.sea_level}m</p>
-          <p>Feels like: {weather.main.feels_like}°C</p>
-        </div>
+        <Report weather={weather}></Report>
       )}
-    </div>
+    </Wrapper>
   )
 }
 
