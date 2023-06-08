@@ -37,8 +37,8 @@ function App() {
   }
 
   useEffect(() => {
-    fetchWeather();
-  }, []);
+    fetchWeather(); // eslint-disable-next-line
+  }, []); // eslint-disable-next-line
 
   return (
     <Wrapper>
